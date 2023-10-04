@@ -23,6 +23,10 @@ class ViewController: UIViewController {
             colors.append(generateRandomColor())
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! colorsViewController
+        dest.color = sender as? UIColor
+    }
 }
     
 //    override func performSegue(withIdentifier identifier: "toColors", sender: nil;)
@@ -45,6 +49,7 @@ extension ViewController: UITableViewDelegate , UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toColors", sender: nil)
+        var color = colors[indexPath.row]
+        performSegue(withIdentifier: "toColors", sender: color)
     }
 }
