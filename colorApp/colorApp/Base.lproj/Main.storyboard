@@ -16,23 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4d-2W-jY9">
-                                <rect key="frame" x="138" y="409" width="116.33333333333334" height="35"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go to colors" cornerStyle="large">
-                                    <color key="baseForegroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                </buttonConfiguration>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qbE-K7-Cna">
+                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <action selector="goToColors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fOx-hx-K0u"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="au3-To-oTk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Zs6-5u-AKM"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
-                            <constraint firstItem="i4d-2W-jY9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1fV-rR-n8p"/>
-                            <constraint firstItem="i4d-2W-jY9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6Fi-Tr-nPw"/>
+                            <constraint firstItem="qbE-K7-Cna" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="94q-Kd-hnZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qbE-K7-Cna" secondAttribute="bottom" id="9Mq-8f-aub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qbE-K7-Cna" secondAttribute="trailing" id="NVo-Aj-nCp"/>
+                            <constraint firstItem="qbE-K7-Cna" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oxi-mA-vAV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="colors" id="9lP-tz-865"/>
@@ -82,12 +81,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
